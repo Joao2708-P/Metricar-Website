@@ -1,0 +1,103 @@
+.footer 
+{
+    background-color: #ff6f00;
+    color: white;
+    border-top: 2px solid #4B0082;
+    position: fixed;
+    bottom: 0;
+    z-index: 10000;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+}
+
+.footer-container 
+{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.footer-container .logo
+{
+    color: #0000ff;
+    margin-bottom: 1rem;
+}
+
+.footer-container .logo span 
+{
+    color: #4B0082;
+}
+
+.footer-container .footer-box 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.redes 
+{
+    display: flex;
+    align-items: center;
+}
+
+.redes a 
+{
+    font-size: 24px;
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.redes a:hover 
+{
+    color: #ff0000;
+}
+
+.footer-box h3 
+{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.footer-box a 
+{
+    margin-bottom: 10px;
+    color: #d6d6d6;
+}
+
+.footer-box a:hover
+{
+    color: #0000ff;
+}
+
+.footer-box .Textera 
+{
+    position: relative;
+    display: block;
+}
+
+.footer-box .Textera .text 
+{
+    width: 20rem;
+    height: 2.5rem;
+    outline: none;
+    background-color: #fff;
+    color: #000;
+}
+
+.footer-box .Textera button 
+{
+    height: 2.5rem;
+    width: 10rem;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    background-color: #0000ff;
+}

@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  main{
+    margin-bottom: 61px;
+    color: #000;
+  }
+  
+.Conteudo
+{
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    background-color: #ff6f00;
+    height: 90vh;
+}
+
+.Conteudo .captura 
+{
+    justify-content: center;
+    align-items: center;
+    display: block;
+    gap: 1rem;
+}
+
+.Conteudo .captura .content-cars h1
+{
+    color: #fff;
+}
+
+.Conteudo .captura .content-cars .Redome 
+{
+    width: 30%;
+    height: 70vh;
+    border-radius: 50% 0 0 50%; /* Defina o primeiro valor para o raio horizontal e o segundo valor para o raio vertical */
+    background-color: #993399;
+    float: right;
+    margin-top: 9rem;
+}
+
+.Conteudo  .captura .content-cars .Redome img
+{
+    position: relative;
+    float: right;
+    width: 50rem;
+    height: 30rem;
+}
+
+.Conteudo .captura .content-cars .informations
+{
+    position: absolute;
+    margin-top: 14rem;
+    margin-left: 5rem;
+    width: 40%;
+    height: 55%;
+    border-radius: 10px;
+    background-color: #993399;
+    color: #fff;
+}
+
+.Conteudo .captura .content-cars .informations h2 
+{
+    margin-left: 1rem;
+}
+
+.Conteudo .captura .content-cars .informations p 
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    font-size: large;
+    margin-left: 5rem;
+}
+
+.Conteudo .captura .content-cars .informations .btn 
+{
+    margin-top: 2rem;
+    width: 10rem;
+    height: 3rem;
+    font-size: large;
+    color: #0000ffff;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    margin-left: 5rem;
+    box-shadow: 5px 10px 5px #6c6b6b;
+    padding: 0.612rem;
+    cursor: pointer;
+    background-image: linear-gradient(to left, #0000ffff 50%, transparent 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.5s ease-in-out, color 0.5s ease-in-out;
+  }
+  
+.Conteudo .captura .content-cars .informations .btn:hover 
+{
+    background-position: -100% 0;
+    color: #fff;
+}
+  
+
+.captura .content-cars h1 
+{
+    position: absolute;
+    font-family:'Roboto', sans-serif ;
+    font-size: 5rem;
+    margin-left: 2rem;
+    margin-top: 5rem;
+}
+/*--------------------------------------------*/
+/*About*/
+.about 
+{
+   position: relative;
+   display: flex;
+   margin-top: 10rem;
+   height: 90vh;
+}
+
+.about .content-about h1 
+{
+    margin-left: 2rem;
+    font-size: xx-large;
+}
+
+
+.about .content-about h1 .metri
+{
+    color: #0000ffff;
+}
+
+.about .content-about span
+{
+    color: #4B0082;
+}
+
+.about .content-about .corp-about
+{
+   align-items: center;
+   display: flex;
+   width: 100%;
+   margin-top: 1rem;
+}
+
+.about .content-about .corp-about p
+{
+    width: 50rem;
+    margin-left: 2rem;
+}
+
+.about .content-about .corp-about .text-button
+{
+   display: flex;
+   flex-direction: column;
+}
+
+.about .content-about .corp-about .text-button button
+{
+    margin-top: 1rem;
+    width: 10rem;
+    height: 3rem;
+    font-size: large;
+    color: #fff;
+    background-color: #993399;
+    border-radius: 5px;
+    margin-left: 2rem;
+    border: none;
+    box-shadow: 5px 10px 5px #6c6b6b;
+    padding: 0.612rem;
+    cursor: pointer;
+}
+
+.about .content-about .corp-about .About-image
+{
+    position: absolute;
+    border-radius: 50% 50%;
+    max-width: 60%;
+    width: 35rem;
+    height: 30rem;
+    margin-left: 58rem;
+    background-color: #6c6b6b;
+    margin-top: -5rem;
+}
+
+.about .content-about .corp-about .About-image img 
+{
+    display: flex;
+    width: 35rem;
+    height: 30rem;
+    justify-content: center;
+    border-radius: 50% 50%;
+}
+/*--------------------------------------------*/
+
+/*Carros*/
+.cars-padron 
+{
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.cars-padron .viem
+{
+    width: 10rem;
+    height: 3rem;
+    font-size: large;
+    color: #fff;
+    background-color: #ff6f00;
+    border-radius: 5px;
+    border: none;
+    margin-left: 44%;
+    box-shadow: 5px 10px 5px #6c6b6b;
+    padding: 0.612rem;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 6rem;
+}
+
+.cars-padron .viem:hover 
+{
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.cars-padron .tittles 
+{
+    font-size: large;
+    text-align: center;
+}
+
+.cars-padron .tittles h1 span
+{
+    color: #993399;
+}
+
+.cars-padron .tittles h4 
+{
+    color: #ff6f00;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.cars-padron .tittles p 
+{
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-cars-padron 
+{
+    position: relative;
+    display: flex;
+    flex-direction: row wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.content-cars-padron .cards {
+    position: relative;
+    width: 30%;
+    height: 10rem;
+    background: #ff6f00;
+    border-radius: 15px;
+    border: 3px solid rgba(7, 9, 10, .1);
+    box-shadow: -1px -1px rgb(255, 111, 0),
+                -1px 1px rgb(255, 111, 0),
+                1px -1px rgb(255, 11, 0),
+                inset inset 1px 1px rgb(255, 111, 0);
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.content-cars-padron .cards:hover {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Adicione uma sombra mais suave ao passar o mouse */
+    transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
+    background: #4B0082;
+}
+
+.content-cars-padron .cards:hover button {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Adicione uma sombra mais suave ao passar o mouse */
+    transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
+    background: #4B0082;
+}
+
+.content-cars-padron .cards img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço do cartão */
+}
+
+.content-cars-padron .cards button 
+{
+    position: absolute;
+    margin-top: -1rem;
+    width: 6rem;
+    height: 2rem;
+    border: none;
+    top: 8rem;
+    border-radius: 5px;
+    left: 2rem;
+    background-color: #0000ffff;
+    cursor: pointer;
+}
+
+/* Efeito de sobreposição de fundo com cor escura da esquerda para a direita */
+.content-cars-padron .cards::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Comece da esquerda */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Cor escura com transparência */
+    opacity: 0; /* Inicialmente transparente */
+    transition: opacity 0.2s, left 0.2s; /* Adicione transição ao opacity e à posição left */
+}
+
+.content-cars-padron .cards:hover::before {
+    opacity: 1; /* Torna o fundo escuro visível no hover */
+    left: 0; /* Move a cortina da esquerda para a direita */
+}
+/*-------------------------------------------*/
+
+/*Map*/
+.map 
+{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: block;
+}
+
+.map h2
+{
+    position: relative;
+    align-items: center;
+    display: block;
+    margin-left: 40%;
+    margin-right: auto;
+    margin-bottom: 5%;
+    font-size: xx-large;
+}
+.map .quadro 
+{
+    width: 60%;
+    height: 100%;
+}
+
+.map .quadro .content-img img 
+{
+    width: 100%;
+    height: 100%;
+    margin-left: 40%;
+}
+
+.map .quadro .content-location 
+{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    margin-left: 40%;
+}
+/*------------------------------------------*/

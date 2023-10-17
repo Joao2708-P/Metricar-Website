@@ -1,0 +1,65 @@
+.cards {
+    position: relative;
+    width: 30%;
+    height: 10rem;
+    background: #ff6f00;
+    border-radius: 15px;
+    border: 3px solid rgba(7, 9, 10, .1);
+    box-shadow: -1px -1px rgb(255, 111, 0),
+                -1px 1px rgb(255, 111, 0),
+                1px -1px rgb(255, 11, 0),
+                inset inset 1px 1px rgb(255, 111, 0);
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.cards:hover {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Adicione uma sombra mais suave ao passar o mouse */
+    transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
+    background: #4B0082;
+}
+
+.cards:hover button {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Adicione uma sombra mais suave ao passar o mouse */
+    transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
+    background: #4B0082;
+}
+.cards img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço do cartão */
+}
+
+.cards button 
+{
+    position: absolute;
+    margin-top: -1rem;
+    width: 4rem;
+    height: 2rem;
+    border: none;
+    top: 8rem;
+    border-radius: 5px;
+    left: 2rem;
+    background-color: #0000ffff;
+    cursor: pointer;
+}
+
+/* Efeito de sobreposição de fundo com cor escura da esquerda para a direita */
+ .cards::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Comece da esquerda */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Cor escura com transparência */
+    opacity: 0; /* Inicialmente transparente */
+    transition: opacity 0.2s, left 0.2s; /* Adicione transição ao opacity e à posição left */
+}
+
+.cards:hover::before {
+    opacity: 1; /* Torna o fundo escuro visível no hover */
+    left: 0; /* Move a cortina da esquerda para a direita */
+}
