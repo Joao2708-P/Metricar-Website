@@ -1,27 +1,71 @@
 import '../Styles/Content.css'
+import { Cars, GetCar } from '../Api/api'
+import { useEffect, useState } from 'react'
+import Slider from 'react-slick'
 
-function Container() {
+function Container() 
+{
 
+  const [currentCarList, setCarsList] = useState(0)
+  const [carList, setCarList] = useState<Cars[]>([])
+
+  useEffect(() => {
+    // Buscar os dados quando o componente for montado
+    const fetchCars = async () => {
+      const cars = await GetCar() // Substitua por sua função de busca de dados
+      setCarList(cars)
+    }
+
+    fetchCars()
+  }, [])
+
+  useEffect(() => {
+    const nextSlider = () => {
+      setCarsList(currentCarList === carList.length - 1 ? 0 : currentCarList + 1)
+    }
+
+    const slideIntervinal = setInterval(nextSlider, 5000)
+
+    return() => {
+      clearInterval(slideIntervinal)
+    }
+    // Aqui você pode chamar nextSlider e prevSlider quando necessário
+    // Por exemplo, você pode configurar um intervalo para mudar o slide automaticamente
+  }, [currentCarList, carList])
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  }
+  
   return (
     <>
       <main>
         <div className="Conteudo" id='Inicio'>
             <div className="captura">
               <div className="content-cars">
-                <strong><h1>Honda Civic</h1></strong>
-                <div className="informations">
-                  <h2>Infomações do Carro</h2>
-                  <p><strong>- Preço de aluguel:  </strong>R$30,00</p>
-                  <p><strong>- Quilometragem: </strong>36,089 miles</p>
-                  <p><strong>- Ano: </strong>2017</p>
-                  <p><strong>- Vehicle Condition: </strong>Used - Like New</p>
-                  <p><strong>- Exterior Color: </strong>Black / Crystal Silver Metallic</p>
-                  <p><strong>- Interior Color: </strong>Black / Black / Black / Black</p>
-                  <button className="btn btn-primary" type="submit">Alugue Agora</button>
-                </div>
-                <div className='Redome'>
-                  <img src="/Honda.png" alt="Honda-Civic" />
-                </div>
+
+                  {carList.length > 0 && (
+                    <>
+                      <strong><h1>{carList[currentCarList].name}</h1></strong>
+                        <div className="informations">
+                          <h2>Infomações do Carro</h2>
+                          <p><strong>- Preço de aluguel:  R${carList[currentCarList].preco}</strong></p>
+                          <p><strong>- Quilometragem: </strong>{carList[currentCarList].quilometragem} Km</p>
+                          <p><strong>- Ano: </strong>{carList[currentCarList].ano}</p>
+                          <p><strong>- Vehicle Condition: </strong>{carList[currentCarList].condicao}</p>
+                          <p><strong>- Exterior Color: </strong>{carList[currentCarList].exterior_color}</p>
+                          <p><strong>- Interior Color: </strong>{carList[currentCarList].interior_color}</p>
+                          <button className="btn btn-primary" type="submit">Alugue Agora</button>
+                        </div>
+                        <div className='Redome'>
+                          <img src={carList[currentCarList].imagem} alt="Honda-Civic" />
+                        </div>
+                    </>
+                  )}
               </div>
             </div>
           </div>

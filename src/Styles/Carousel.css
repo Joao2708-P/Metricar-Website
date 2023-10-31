@@ -1,0 +1,51 @@
+/* Carrossel de carros */
+.car-carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px; /* A largura máxima do carrossel */
+    margin: 0 auto; /* Centraliza o carrossel horizontalmente */
+  
+    .car-slide {
+      flex: 0 0 100%;
+      transition: transform 0.5s; /* Adiciona uma transição suave */
+      text-align: center;
+    }
+  
+    img {
+      max-width: 100%; /* Ajusta a largura da imagem para que ela não se estenda além do carrossel */
+      height: auto;
+    }
+  
+    h3 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  
+    .prev, .next {
+      cursor: pointer;
+      padding: 10px;
+      background: #333;
+      color: #fff;
+      font-size: 24px;
+      border: none;
+    }
+  
+    .prev {
+      margin-right: 10px;
+    }
+  
+    .next {
+      margin-left: 10px;
+    }
+  
+    /* Estilize o slide ativo (o que está visível) */
+    .active {
+      transform: translateX(0%);
+    }
+  }
+  
+  /* Exemplo de estilo para os botões de navegação do carrossel */
+  .prev:hover, .next:hover {
+    background: #555;
+  }

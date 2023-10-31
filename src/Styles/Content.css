@@ -4,7 +4,7 @@
   }
   
   main{
-    margin-bottom: 61px;
+    margin-bottom: 51px;
     color: #000;
   }
   
@@ -15,6 +15,7 @@
     width: 100%;
     background-color: #ff6f00;
     height: 90vh;
+    margin-top: -2rem;
 }
 
 .Conteudo .captura 
@@ -23,6 +24,11 @@
     align-items: center;
     display: block;
     gap: 1rem;
+}
+
+.Conteudo .captura .content-cars
+{
+    transition: all 0.5s;
 }
 
 .Conteudo .captura .content-cars h1
@@ -51,10 +57,10 @@
 .Conteudo .captura .content-cars .informations
 {
     position: absolute;
-    margin-top: 14rem;
+    margin-top: 12rem;
     margin-left: 5rem;
     width: 40%;
-    height: 55%;
+    height:  63%;
     border-radius: 10px;
     background-color: #993399;
     color: #fff;
