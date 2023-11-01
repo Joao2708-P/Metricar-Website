@@ -1,7 +1,6 @@
 import '../Styles/Content.css'
 import { Cars, GetCar } from '../Api/api'
 import { useEffect, useState } from 'react'
-import Slider from 'react-slick'
 
 function Container() 
 {
@@ -33,14 +32,19 @@ function Container()
     // Por exemplo, você pode configurar um intervalo para mudar o slide automaticamente
   }, [currentCarList, carList])
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
+  let convertVal = 0;
+
+  let val = carList[currentCarList]?.preco
+  if(typeof val === 'string')
+  {
+    val = parseFloat(val);
   }
-  
+
+  if (typeof val === 'number') {
+    let preco = val.toFixed(2);
+    convertVal = parseFloat(preco);
+  }  
+
   return (
     <>
       <main>
@@ -53,7 +57,7 @@ function Container()
                       <strong><h1>{carList[currentCarList].name}</h1></strong>
                         <div className="informations">
                           <h2>Infomações do Carro</h2>
-                          <p><strong>- Preço de aluguel:  R${carList[currentCarList].preco}</strong></p>
+                          <p><strong>- Preço de aluguel:  R${convertVal}</strong></p>
                           <p><strong>- Quilometragem: </strong>{carList[currentCarList].quilometragem} Km</p>
                           <p><strong>- Ano: </strong>{carList[currentCarList].ano}</p>
                           <p><strong>- Vehicle Condition: </strong>{carList[currentCarList].condicao}</p>
