@@ -1,79 +1,70 @@
-import '../Styles/Content.css'
-import { Cars, GetCar } from '../Api/api'
-import { useEffect, useState } from 'react'
+import '../Styles/Content.css';
+import { Cars, GetCar } from '../Api/api';
+import { useEffect, useState } from 'react';
+import currency from 'currency.js'
 
-function Container() 
-{
-
-  const [currentCarList, setCarsList] = useState(0)
-  const [carList, setCarList] = useState<Cars[]>([])
+function Content() {
+  const [currentCarList, setCarsList] = useState(0);
+  const [carList, setCarList] = useState<Cars[]>([]);
 
   useEffect(() => {
-    // Buscar os dados quando o componente for montado
     const fetchCars = async () => {
-      const cars = await GetCar() // Substitua por sua função de busca de dados
-      setCarList(cars)
-    }
+      const cars = await GetCar();
+      setCarList(cars);
+    };
 
-    fetchCars()
-  }, [])
+    fetchCars();
+  }, []);
 
   useEffect(() => {
     const nextSlider = () => {
-      setCarsList(currentCarList === carList.length - 1 ? 0 : currentCarList + 1)
-    }
+      setCarsList((prev) => (prev === carList.length - 1 ? 0 : prev + 1));
+    };
 
-    const slideIntervinal = setInterval(nextSlider, 5000)
+    const slideInterval = setInterval(nextSlider, 5000);
 
-    return() => {
-      clearInterval(slideIntervinal)
-    }
-    // Aqui você pode chamar nextSlider e prevSlider quando necessário
-    // Por exemplo, você pode configurar um intervalo para mudar o slide automaticamente
-  }, [currentCarList, carList])
+    return () => {
+      clearInterval(slideInterval);
+    };
+  }, [carList]);
 
-  let convertVal = 0;
-
-  let val = carList[currentCarList]?.preco
-  if(typeof val === 'string')
-  {
-    val = parseFloat(val);
-  }
-
-  if (typeof val === 'number') {
-    let preco = val.toFixed(2);
-    convertVal = parseFloat(preco);
-  }  
+  const currentCar = carList[currentCarList] || {};
+  const precoString = typeof currentCar.preco === 'number' ? currentCar.preco.toString() : currentCar.preco || '0';
+  const convertVal = parseFloat(parseFloat(precoString).toFixed(2));
+  const format_price = currency(convertVal, { symbol: 'R$', separator: ',', decimal: '.'}).format(); 
 
   return (
     <>
       <main>
-        <div className="Conteudo" id='Inicio'>
-            <div className="captura">
-              <div className="content-cars">
-
-                  {carList.length > 0 && (
-                    <>
-                      <strong><h1>{carList[currentCarList].name}</h1></strong>
-                        <div className="informations">
-                          <h2>Infomações do Carro</h2>
-                          <p><strong>- Preço de aluguel:  R${convertVal}</strong></p>
-                          <p><strong>- Quilometragem: </strong>{carList[currentCarList].quilometragem} Km</p>
-                          <p><strong>- Ano: </strong>{carList[currentCarList].ano}</p>
-                          <p><strong>- Vehicle Condition: </strong>{carList[currentCarList].condicao}</p>
-                          <p><strong>- Exterior Color: </strong>{carList[currentCarList].exterior_color}</p>
-                          <p><strong>- Interior Color: </strong>{carList[currentCarList].interior_color}</p>
-                          <button className="btn btn-primary" type="submit">Alugue Agora</button>
-                        </div>
-                        <div className='Redome'>
-                          <img src={carList[currentCarList].imagem} alt="Honda-Civic" />
-                        </div>
-                    </>
-                  )}
-              </div>
+        <div className="Conteudo" id="Inicio">
+          <div className="captura">
+            <div className="content-cars">
+              {carList.length > 0 && (
+                <>
+                  <strong> <h1>{currentCar.name}</h1></strong>
+                  <div className="informations">
+                    <h2>Infomações do Carro</h2>
+                    <p><strong>- Preço do Carro: {format_price}</strong></p>
+                    <p><strong>- Quilometragem: </strong> {currentCar.quilometragem} Km</p>
+                    <p><strong>- Ano: </strong>{currentCar.ano}</p>
+                    <p><strong>- Vehicle Condition: </strong>{currentCar.condicao}</p>
+                    <p><strong>- Exterior Color: </strong>{currentCar.exterior_color}</p>
+                    <p><strong>- Interior Color: </strong>{currentCar.interior_color}</p>
+                    <button className="btn btn-primary" type="submit">Compre Agora</button>
+                  </div>
+                  <div className="Redome">
+                    <img
+                      crossOrigin='anonymous'
+                      src={`http://localhost:3000/${currentCar.imagem}`} // Certifique-se de que esta URL corresponde à URL servida pelo Express
+                      alt={currentCar.name}
+                    />
+                  </div>
+                </>
+              )}
             </div>
           </div>
-         
+        </div>
+
         {/* About Section */}
         <div ></div>
         <section className="about" id="About">
@@ -254,4 +245,4 @@ function Container()
   )
 }
 
-export default Container
+export default Content

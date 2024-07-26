@@ -14,7 +14,8 @@ export interface Cars {
     exterior_color: string,
     interior_color: string,
     disponibilidade: boolean,
-    tipo_do_carro_id: string
+    type_slug: string,
+    promotion_slug: boolean 
 }
 
 export async function GetCar(): Promise<Cars[]>

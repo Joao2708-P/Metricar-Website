@@ -13,9 +13,9 @@
     position: relative;
     overflow-x: hidden;
     width: 100%;
+    height: 100vh;
+    margin-top: 0.5rem;
     background-color: #ff6f00;
-    height: 90vh;
-    margin-top: -2rem;
 }
 
 .Conteudo .captura 
@@ -23,7 +23,7 @@
     justify-content: center;
     align-items: center;
     display: block;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .Conteudo .captura .content-cars
@@ -40,10 +40,10 @@
 {
     width: 30%;
     height: 70vh;
-    border-radius: 50% 0 0 50%; /* Defina o primeiro valor para o raio horizontal e o segundo valor para o raio vertical */
+    border-radius: 50% 0 0 50%; 
     background-color: #993399;
     float: right;
-    margin-top: 9rem;
+    margin-top: 11rem;
 }
 
 .Conteudo  .captura .content-cars .Redome img
@@ -57,11 +57,12 @@
 .Conteudo .captura .content-cars .informations
 {
     position: absolute;
-    margin-top: 12rem;
-    margin-left: 5rem;
+    margin-top: 13rem;
+    margin-left: 3rem;
     width: 40%;
     height:  63%;
     border-radius: 10px;
+    font-size: 20px;
     background-color: #993399;
     color: #fff;
 }
@@ -69,13 +70,14 @@
 .Conteudo .captura .content-cars .informations h2 
 {
     margin-left: 1rem;
+    margin-bottom: 2rem;
 }
 
 .Conteudo .captura .content-cars .informations p 
 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-right: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     font-size: large;
     margin-left: 5rem;
 }

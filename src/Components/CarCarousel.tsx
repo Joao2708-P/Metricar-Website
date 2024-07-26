@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Cars } from '../Api/api'; // Importe a interface Cars do seu arquivo API
 import '../Styles/Carousel.css'
 
