@@ -1,9 +1,9 @@
-import '../Styles/Content.css';
-import { Cars, GetCar } from '../Api/api';
+import './Content.css';
+import { Cars, GetCar } from '../../api/api';
 import { useEffect, useState } from 'react';
 import currency from 'currency.js'
 
-function Content() {
+function HomeContent() {
   const [currentCarList, setCarsList] = useState(0);
   const [carList, setCarList] = useState<Cars[]>([]);
 
@@ -245,4 +245,4 @@ function Content() {
   )
 }
 
-export default Content
+export default HomeContent

@@ -1,0 +1,140 @@
+.container {
+    margin-top: 4.5rem;
+}
+
+.container .image-car {
+    width: 100%;
+    height: 40rem;
+    z-index: -1000000;
+    background-color: red; /* Apenas para visualização */
+}
+
+.container .image-car img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container .car-payment-informations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.container .details-car {
+    width: 60%;
+    height: 50rem;
+    background-color: #f7f4f4;
+    border-radius: 3%;
+    margin-top: -4rem;
+    margin-left: 1rem; /* Ajuste conforme necessário */
+}
+
+.container .details-car .intial-informations {
+    margin-left: 3rem;
+}
+
+
+.container .details-car .intial-informations p {
+    margin-bottom: 4rem;
+    opacity: 0.5;
+}
+
+.container .details-car  .car-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: large;
+}
+
+.container .details-car  .car-details p {
+    flex: 1 1 22%;
+    min-width: 150px;
+    margin-bottom: 5rem;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+.container .car-description {
+    width: 90%;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.container .price-payment {
+    width: 37%;
+    height: 30rem;
+    background-color: #f7f4f4;
+    border-radius: 3%;
+    margin-top: -4rem;
+    margin-right: 1rem; /* Ajuste conforme necessário */
+}
+
+.container .price-payment .descount {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.container .price-payment .descount p {
+    flex-direction: column;
+}
+
+.container .price-payment .descount h1 {
+    margin-left: 2rem;
+}
+
+.container .price-payment p {
+    margin-left: 33px;
+    color: #0000003b;
+} 
+
+.container .price-payment .descount h2 {
+    margin-left: 30%;
+    margin-top: 1%;
+    width: 4rem;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    flex-direction: row;
+    background-color: blue;
+}
+
+
+.container .price-payment .complete-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.container .price-payment .complete-register input {
+    width: 90%;
+    height: 40px;
+    color: #000;
+    border-left: 5px;
+    border: 1px solid black;
+    background-color: #fff;
+    margin-bottom: 3rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.container .price-payment .complete-register .btns {
+    flex-direction: row;
+    width: 100%;
+    margin-left: 15%;
+}
+
+.container .price-payment .complete-register .btn {
+    width: 30%;
+    background-color: blue;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 50px;
+}

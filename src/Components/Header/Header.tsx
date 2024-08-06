@@ -1,4 +1,4 @@
-import '../Styles/Header.css';
+import './Header.css';
 import { Link } from 'react-router-dom';
 import { Car, User, Menu, X } from 'lucide-react';
 import { useState } from 'react';

@@ -1,4 +1,4 @@
- import '../Styles/Footer.css'
+ import './Footer.css'
  import { Instagram, Twitter, Facebook, Youtube } from 'lucide-react'
 
  function Footer()

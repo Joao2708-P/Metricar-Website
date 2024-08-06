@@ -1,12 +1,12 @@
-import Header from "../../Components/Header";
-import Content from "../../Components/HomeContent";
-import Footer from "../../Components/Footer";
+import Header from "../../Components/Header/Header";
+import HomeContent from "../../Components/HomeContent/HomeContent";
+import Footer from "../../Components/Footer/Footer";
 
 const Home = () => {
     return(
         <div>
             <Header/>
-            <Content/>
+            <HomeContent/>
             <Footer/>
         </div>
     )
